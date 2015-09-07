@@ -1,0 +1,10 @@
+@startuml
+Client -> ArenametriX: (1) Envoie des données billetterie
+ArenametriX -> ArenametriX : Traitement et insertion \n des données en base
+ArenametriX -> ArenametriX : (2) Enrichissement des données
+ArenametriX -> ArenametriX : (3) Analyse statistique des données
+ArenametriX --> Client : Estimation des ventes futures \n Proposition de nouvelles offres tarifaire \n Scoring sur les abonnées
+
+
+
+@enduml
