@@ -1,3 +1,4 @@
+%\documentclass[aspectratio=169,handout]{beamer}
 \documentclass[aspectratio=169]{beamer}
 
 \hypersetup{pdfpagemode=FullScreen}
@@ -31,10 +32,47 @@
   \frametitle{Sommaire}
   \tableofcontents
   \end{frame}
+  
+  \AtBeginSection[]{
+  \begin{frame}
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\
+  \end{beamercolorbox}
+  \end{frame}
+}
 
 
 \section{Présentation de l'entreprise}
 \begin{frame}
+\frametitle{L'entreprise Tech`4`Team}
+	
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.4\textwidth}
+			\begin{center}
+				\includegraphics[scale=0.52]{images/Logo_T4T}
+			\end{center}
+		\end{column}
+
+		\begin{column}{0.6\textwidth}
+				Tech`4`Team est une startup créée en juillet 2013 par deux entrepreneurs diplômés d'HEC Paris et d'ENSAE ParisTech.
+
+		 \end{column}
+	\end{columns}
+
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.45\textwidth}
+			\begin{block}{Inventor-e}
+				Logiciel de gestion de planning et de suivi d'états des lieux.
+			\end{block}
+		\end{column}
+
+		\begin{column}{0.45\textwidth}
+			\begin{block}{Arenametrix}
+				Solution de Yield Management pour les billetteries sportives et culturelles.
+			\end{block}
+		 \end{column}
+	\end{columns}
 
 
 \end{frame}
@@ -73,21 +111,21 @@ L'interface web est en \textbf{Ruby on Rails} et la base de données fonctionne a
 			\begin{itemize}
 				\item ArenaPricing 
 				\item ArenaPublic
-				\item ArenaProsepction
+				\item ArenaProspection
 			\end{itemize}
 
 		  \end{column}
 		  
 		  \begin{column}{0.6\textwidth}
-		  \begin{block}{Arenametrix en quelques mots}
-			Logiciel de spécialement conçu pour les billetterie sportives, culturelles et de loisirs. 
+		  \begin{block}{Le logiciel Arenametrix}
+			Logiciel d'analyse de données conçu pour les billetteries sportives, culturelles et de loisirs. 
 		\end{block}
 		\pause
 
 		\begin{itemize}
 			\item ArenaPricing est le module de Yield Management
 			\item ArenaPublic est le socle e-CRM d'exploitation des données publics
-			\item ArenaPublic est un module d'optimisation du démarchage
+			\item ArenaProspection est un module d'optimisation du démarchage
 		\end{itemize}
 
 		  \end{column}
@@ -119,7 +157,7 @@ L'interface web est en \textbf{Ruby on Rails} et la base de données fonctionne a
 		\begin{itemize}
 			\item \textbf{(1)} Données récupérées par API ou transmises dans des fichiers CSV 
 			\item \textbf{(2)} Enrichissement des données avec la météo, les vacances...
-			\item \textbf{(3)} Analyse statistique réalisée par des modèles de prévisions écrient par les statisticiens
+			\item \textbf{(3)} Analyse statistique réalisée par des modèles de prévisions développés par les statisticiens
 		\end{itemize}
 	\end{column}
 	
@@ -176,20 +214,20 @@ L'interface web est en \textbf{Ruby on Rails} et la base de données fonctionne a
 \begin{itemize}
 	\item Parser et intégrer dans la base de données les \textbf{fichiers CSV} et intégrer les \textbf{API} des logiciels billetteries
 	\item Réalisation d'un \textbf{front d'importation} de ces données
-	\item Modifier la base de données en fonction des besoin clients
+	\item Modifier la base de données en fonction des besoins clients
 \end{itemize}
 
 \end{frame}
 
 \subsection{Problèmes rencontrés}
 \begin{frame}
-\begin{alertblock}{Données des clients sont rarement conformes a nos attentes }
-	Il nous est impossible de réaliser un parser de CSV unique. Pour un même logiciel de billetterie les données de ne sont pas toujours similaires
+\begin{alertblock}{Les données des clients sont rarement conformes à nos attentes }
+	Il nous est impossible de réaliser un parseur de CSV unique. Pour un même logiciel de billetterie les données ne sont pas toujours similaires.
 \end{alertblock}
 
 \pause
 \begin{exampleblock}{Réalisation d'un front logiciel qui s'adapte} 
-L'utilisateur effectue un mapping entre les colonnes du fichier et les données attendues
+L'utilisateur effectue un mapping entre les colonnes du fichier et les données attendues.
 \end{exampleblock}
 
 \begin{center}
@@ -199,22 +237,32 @@ L'utilisateur effectue un mapping entre les colonnes du fichier et les données a
 
 
 
-\section{Résultats et conclusions}
+\section{Résultats et conclusion}
 \begin{frame}
-\frametitle{Résultats et conclusions}
+\frametitle{Résultats et conclusion}
 
 \begin{itemize}
-		\item A la fin de mon stage nous avons une \textbf{quinzaine de compte clients disponibles} dans le logiciel ArenaPricing.
+		\item À la fin de mon stage, nous avons une \textbf{quinzaine de comptes clients disponibles} dans le logiciel ArenaPricing.
 		\item Les comptes ne sont \textbf{pas encore mis a jour en "temps réel"} mais permettent de faire vendre le produit et de pousser les logiciels de billetteries à fournir leurs API
-		\item Un gros travail d'optimisation et de gestion de la monté en charge reste à réaliser. 
+		\item Un gros travail d'optimisation et de gestion de la montée en charge reste à réaliser. 
 \end{itemize}
 
 \begin{block}{Fin de mon stage} 
-A la fin de mon stage j'ai signé un CDI avec l'entreprise, je m'occupe toujours de la base de données et je suis maintenant responsable d'une partie du projet Arenametrix.
+À la fin de mon stage, j'ai signé un CDI avec l'entreprise, je m'occupe toujours de la base de données et je suis maintenant responsable d'une partie du projet Arenametrix.
 \end{block}
+\end{frame}
 
+\begin{frame}
+
+\begin{center}
+\Huge Merci de votre attention
+\\
+\vspace{0.5in}
+\Huge Avez-vous des questions ?
+\end{center}
 
 \end{frame}
+
 
 
 
